@@ -261,7 +261,7 @@ function CarouselContainer({
             <CarouselItem
               aria-hidden={isLastItem}
               className={cn(
-                "flex pl-[16px] lg:basis-[60%] xl:basis-[60%] 2xl:basis-[58%] 2xl:pl-8",
+                "flex pl-[16px] lg:basis-[60%] xl:basis-[60%] 2xl:basis-[58%]",
                 isLastItem ? "hidden lg:flex" : "",
               )}
               key={item.altName}
