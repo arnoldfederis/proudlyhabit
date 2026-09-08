@@ -267,7 +267,7 @@ function CarouselContainer({
               key={item.altName}
             >
               {isLastItem ? null : (
-                <article className="grid w-full overflow-hidden rounded-[2rem] border border-gray bg-white/70 backdrop-blur-2xl md:min-h-[42rem] 2xl:grid-cols-[0.92fr_1.08fr] dark:border-white/10 dark:bg-white/[0.06] dark:shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
+                <article className="grid w-full overflow-hidden rounded-[2rem] border border-gray bg-white/70 backdrop-blur-2xl md:min-h-[42rem] 2xl:grid-cols-[0.92fr_1.08fr] dark:border-white/10 dark:bg-white/[0.06]">
                   <div className="flex h-full flex-col justify-between p-7 sm:p-8 lg:p-12">
                     <div>
                       <p className="font-medium text-[0.75rem] uppercase tracking-[0.28em]">
