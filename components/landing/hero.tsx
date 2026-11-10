@@ -50,7 +50,7 @@ export function Hero() {
         <div className="pointer-events-none absolute top-1/2 left-1/2 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-3xl" />
         <PhoneMockup className="relative">
           <Image
-            alt="Do one thing today that makes you proud"
+            alt="Proudly Today screen with habits to check off and two habits taking a rest day"
             blurDataURL={deviceBlurDataURL}
             className="h-auto w-65 sm:w-75"
             height={2796}

@@ -65,12 +65,27 @@ export const FAQ_ITEMS = [
   {
     question: "What is Proudly Plus?",
     answer:
-      "Proudly Plus unlocks unlimited habits, custom themes, Proud Moments history, and advanced progress insights.",
+      "Proudly Plus unlocks unlimited habits, Home and Lock Screen habit widgets, iCloud sync, custom themes, Proud Moments history, and advanced progress insights.",
   },
   {
     question: "Can I track habits multiple times per day?",
     answer:
       "Yes. Proudly supports habits that can be completed more than once per day, such as drinking water four times a day.",
+  },
+  {
+    question: "Can I choose which days a habit runs?",
+    answer:
+      "Yes. A habit can run every day, on certain days like Monday, Wednesday and Friday, or toward a weekly goal like 3 times a week. Days a habit isn't scheduled never break your streak.",
+  },
+  {
+    question: "What is a rest day?",
+    answer:
+      "A rest day lets you take a day off from a habit without losing your streak. Your streak pauses instead of breaking, and picks up again when you next check in.",
+  },
+  {
+    question: "Does Proudly have widgets?",
+    answer:
+      "Yes. The free Today widget shows today's habits and lets you check them off with one tap. Proudly Plus adds single-habit widgets for the Home Screen and Lock Screen.",
   },
   {
     question: "Does Proudly support reminders?",
@@ -107,7 +122,7 @@ export const FAQ_ITEMS = [
   },
 ] as const;
 
-export const HOME_FAQ_ITEMS = FAQ_ITEMS.slice(0, 6);
+export const HOME_FAQ_ITEMS = FAQ_ITEMS.slice(0, 8);
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();

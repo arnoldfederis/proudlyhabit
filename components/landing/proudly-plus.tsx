@@ -3,6 +3,7 @@ import { FadeIn } from "@/components/common/motion";
 
 const BENEFITS = [
   "Unlimited habits",
+  "Home & Lock Screen habit widgets",
   "Custom themes",
   "Proud Moments history",
   "Advanced progress insights",

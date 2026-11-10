@@ -14,6 +14,24 @@ type CarouselFeatureItem = {
 
 const carouselItems: CarouselFeatureItem[] = [
   {
+    altName: "Lock Screen widgets",
+    eyebrow: "Lock Screen",
+    heading: "Your habit, one glance away.",
+    body: "Put a habit on your Lock Screen to see today's progress and your streak, and check in with a tap. Part of Proudly Plus.",
+    imageSrc: "/assets/device-17.png",
+    imageAlt:
+      "iPhone Lock Screen with Proudly habit widgets showing a completed habit and its streak",
+  },
+  {
+    altName: "Weekly goals",
+    eyebrow: "Weekly goals",
+    heading: "Aim for 3× a week, not every day.",
+    body: "Set a weekly goal and check in on any days you like. Your streak counts the weeks you hit your goal.",
+    imageSrc: "/assets/device-19.png",
+    imageAlt:
+      "Proudly habit page for a 3× a week goal showing a 21-week streak",
+  },
+  {
     altName: "Monthly History",
     eyebrow: "Full month view",
     heading: "See your whole month at a glance.",
@@ -88,7 +106,7 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Proudly Plus",
     eyebrow: "Upgrade",
     heading: "Unlock more room to grow.",
-    body: "Upgrade when you want unlimited habits, custom themes, Proud Moments history, and deeper progress insights.",
+    body: "Upgrade when you want unlimited habits, habit widgets for your Home and Lock Screen, custom themes, Proud Moments history, and deeper progress insights.",
     imageSrc: "/assets/device-11.png",
     imageAlt:
       "Proudly Plus screen showing unlimited habits, custom themes, Proud Moments, and progress insights",
@@ -136,8 +154,8 @@ export function AppleStyleFeatureCarousel() {
             .
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-[#6F6478] text-base leading-relaxed sm:text-lg dark:text-white/72">
-            Proudly brings your habits, progress, themes, subscription status,
-            and proud moments together in one calm place.
+            Proudly brings your habits, widgets, progress, themes, and proud
+            moments together in one calm place.
           </p>
         </FadeIn>
       </div>

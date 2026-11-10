@@ -6,31 +6,41 @@ import { deviceBlurDataURL } from "@/lib/image-placeholders";
 const SHOWCASES = [
   {
     id: "habit",
-    eyebrow: "Gentle progress",
-    headline: "See progress without pressure.",
-    body: "View current streaks, best streaks, and recent completions in a way that feels calm, encouraging, and easy to return to.",
-    phoneFirst: false,
-    muted: false,
+    eyebrow: "Your history",
+    headline: "See every small win at a glance.",
+    body: "Each habit gets its own calendar grid, so your progress builds into a picture you can be proud of. Current streak, best streak, and every check-in, all in one calm view.",
     src: "/assets/device-2.png",
-    alt: "Proudly habit progress screen showing streaks and recent completions",
+    alt: "Proudly Habits tab showing a calendar grid of check-ins for each habit",
   },
   {
     id: "flexible",
-    eyebrow: "Flexible habits",
+    eyebrow: "Flexible schedules",
     headline: "Build habits your way.",
-    body: "Track simple once-a-day habits or goals you complete multiple times a day, from reading a few pages to drinking more water.",
-    phoneFirst: true,
-    muted: true,
+    body: "Run a habit every day, on certain days like Mon, Wed and Fri, or set a weekly goal like 3× a week. Track it once a day or a few times, from reading a few pages to drinking more water.",
     src: "/assets/device-3.png",
-    alt: "Proudly habit setup screen for creating a flexible daily habit",
+    alt: "Proudly habit editor showing schedule options with Monday, Wednesday and Friday selected",
+  },
+  {
+    id: "rest-days",
+    eyebrow: "Rest days",
+    headline: "Take a break without losing your streak.",
+    body: "Mark a rest day and your streak pauses instead of breaking. Days a habit isn't scheduled never count against you either, because rest is part of progress.",
+    src: "/assets/device-18.png",
+    alt: "Proudly habit page on a rest day showing the streak paused",
+  },
+  {
+    id: "widgets",
+    eyebrow: "Widgets",
+    headline: "Check in right from your Home Screen.",
+    body: "Tap a habit in the Today widget to mark it done without opening the app. With Proudly Plus, add single-habit widgets to your Home Screen and Lock Screen.",
+    src: "/assets/device-16.png",
+    alt: "iPhone Home Screen with Proudly's Today widget and single-habit widget",
   },
   {
     id: "kind",
     eyebrow: "Kind reminders",
     headline: "Gentle reminders for your routine.",
-    body: "Set soft local reminders that help you check in at the right time without pressure, noise, or guilt.",
-    phoneFirst: false,
-    muted: false,
+    body: "Set soft local reminders that help you check in at the right time, only on the days a habit runs, without pressure, noise, or guilt.",
     src: "/assets/device-4.png",
     alt: "Proudly reminder settings screen for gentle habit reminders",
   },
@@ -38,13 +48,16 @@ const SHOWCASES = [
     id: "plus",
     eyebrow: "Proudly Plus",
     headline: "More room for your small wins.",
-    body: "Unlock unlimited habits, iCloud sync across your Apple devices, monthly history, custom themes, Proud Moments, and deeper insights — momentum trends, weekday patterns, a 30-day consistency score, and a 6-month heatmap.",
-    phoneFirst: true,
-    muted: true,
+    body: "Unlock unlimited habits, Home and Lock Screen habit widgets, iCloud sync across your Apple devices, monthly history, custom themes, Proud Moments, and deeper insights: momentum trends, weekday patterns, a 30-day consistency score, and a 6-month heatmap.",
     src: "/assets/device-5.png",
     alt: "Proudly Plus screen showing premium habit tracking features",
   },
-];
+].map((s, index) => ({
+  ...s,
+  // Alternate the phone side and section background down the page.
+  phoneFirst: index % 2 === 1,
+  muted: index % 2 === 1,
+}));
 
 export function FeatureShowcase() {
   return (
