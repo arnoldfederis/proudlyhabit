@@ -35,7 +35,7 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Monthly History",
     eyebrow: "Full month view",
     heading: "See your whole month at a glance.",
-    body: "A gentle monthly calendar shows the days you showed up, so your progress is easy to feel — not just count.",
+    body: "A gentle monthly calendar shows the days you showed up, so your progress is easy to feel, not just count.",
     imageSrc: "/assets/device-14.png",
     imageAlt:
       "Proudly monthly history calendar showing completed days for a habit across the month",
@@ -51,12 +51,12 @@ const carouselItems: CarouselFeatureItem[] = [
   },
   {
     altName: "Proud Moments",
-    eyebrow: "Completed wins",
-    heading: "Look back at what you’ve already done.",
-    body: "See the small wins you have completed and remember that progress is already happening.",
-    imageSrc: "/assets/device-7.png",
+    eyebrow: "Proud Moments",
+    heading: "Every win, on a calendar.",
+    body: "See a month of small wins across all your habits, tap any day to see what you did, or scroll them as a list. Part of Proudly Plus.",
+    imageSrc: "/assets/device-22.png",
     imageAlt:
-      "Proudly Proud Moments screen showing completed habits and small wins history",
+      "Proudly Proud Moments calendar showing a month of wins as colored dots, with the selected day's completed habits listed below",
   },
   {
     altName: "Focus Timer",
@@ -66,6 +66,15 @@ const carouselItems: CarouselFeatureItem[] = [
     imageSrc: "/assets/device-12.png",
     imageAlt:
       "Proudly Focus Timer screen showing a countdown for a timed habit",
+  },
+  {
+    altName: "Live Activity",
+    eyebrow: "Live Activity",
+    heading: "Your focus timer, right on your Lock Screen.",
+    body: "Start a Focus Timer and lock your phone. The countdown stays on your Lock Screen and in the Dynamic Island, with pause, end, and a check-in when you're done.",
+    imageSrc: "/assets/device-20.png",
+    imageAlt:
+      "iPhone Lock Screen showing a Proudly focus timer Live Activity counting down for a Journal habit",
   },
   {
     altName: "Siri Shortcuts",
@@ -88,10 +97,10 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Subscription status",
     eyebrow: "Plan status",
     heading: "Know what’s unlocked.",
-    body: "See whether you’re on Proudly Free or Proudly Plus, restore purchases, and manage your subscription when you need to.",
-    imageSrc: "/assets/device-9.png",
+    body: "See your plan at a glance: everything Proudly Plus includes, when a free trial ends, and a gentle reminder before it does. Restore or manage your subscription anytime.",
+    imageSrc: "/assets/device-23.png",
     imageAlt:
-      "Proudly subscription status screen showing Proudly Free or Proudly Plus plan details",
+      "Proudly subscription screen showing Proudly Plus active with unlimited habits, widgets, insights, monthly history and iCloud sync included",
   },
   {
     altName: "Gentle start",
@@ -106,10 +115,10 @@ const carouselItems: CarouselFeatureItem[] = [
     altName: "Proudly Plus",
     eyebrow: "Upgrade",
     heading: "Unlock more room to grow.",
-    body: "Upgrade when you want unlimited habits, habit widgets for your Home and Lock Screen, custom themes, Proud Moments history, and deeper progress insights.",
-    imageSrc: "/assets/device-11.png",
+    body: "Try Proudly Plus free for 7 days: unlimited habits, Home and Lock Screen widgets, advanced insights, monthly history, iCloud sync, custom themes, and Proud Moments. Your first 3 habits stay free forever.",
+    imageSrc: "/assets/device-21.png",
     imageAlt:
-      "Proudly Plus screen showing unlimited habits, custom themes, Proud Moments, and progress insights",
+      "Proudly Plus screen offering a 7-day free trial with unlimited habits, Home and Lock Screen widgets, and advanced progress insights",
   },
   {
     altName: "",

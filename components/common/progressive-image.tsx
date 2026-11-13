@@ -23,7 +23,7 @@ export function ProgressiveImage({
     const element = ref.current;
     if (!element) return;
 
-    // Already in or near viewport — show immediately, skip animation
+    // Already in or near viewport: show immediately, skip animation
     const rect = element.getBoundingClientRect();
     if (rect.top < window.innerHeight + 200 && rect.bottom > -200) {
       setIsVisible(true);

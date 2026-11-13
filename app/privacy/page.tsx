@@ -47,7 +47,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: July 3, 2026"
+      effectiveDate="Effective date: November 13, 2026"
       intro="This Privacy Policy explains how Proudly handles habit data, reminders, subscription status, and support requests."
       title="Privacy Policy"
     >
@@ -63,6 +63,7 @@ export default function PrivacyPage() {
             "Streak history",
             "Reminder preferences and schedules",
             "App settings and theme preferences",
+            "Your name and, if you choose one, a profile photo",
           ]}
         />
       </Section>
@@ -90,6 +91,7 @@ export default function PrivacyPage() {
             "Save your preferences and settings",
             "Schedule local reminders",
             "Sync habit data across your Apple devices when iCloud sync is enabled",
+            "Restore your name, profile photo, and synced habits after reinstalling the app",
             "Manage access to Proudly Plus features",
             "Restore purchases and validate active subscriptions",
             "Improve and maintain the app",
@@ -100,9 +102,9 @@ export default function PrivacyPage() {
 
       <Section title="Local Storage">
         <Body>
-          By default, Proudly stores all habit data locally on your device. If
-          you delete the app, your local habit data will be removed from your
-          device.
+          Proudly stores your habit data on your device. If you are signed in to
+          iCloud, a backup copy is also kept in your private iCloud account (see
+          below). Deleting the app removes the data on your device.
         </Body>
       </Section>
 
@@ -116,6 +118,32 @@ export default function PrivacyPage() {
           cannot access the contents of your private iCloud database. If iCloud
           is unavailable or the user is signed out, Proudly continues to work
           locally on the device.
+        </Body>
+      </Section>
+
+      <Section title="iCloud Backup, Name and Profile Photo">
+        <Body>
+          If you are signed in to iCloud, Proudly saves a backup of your habits
+          (including check-ins, notes, schedules, and reminder settings), your
+          name, and your optional profile photo to your private iCloud
+          key-value storage, so they come back if you reinstall the app or use a
+          new iPhone. This works on the free plan and with Proudly Plus. The
+          photo is resized to a small image before it is saved. Proudly cannot
+          access this data; it stays in your iCloud account and is handled by
+          Apple according to Apple's privacy policy. You can change or remove
+          your name and photo anytime in Profile.
+        </Body>
+      </Section>
+
+      <Section title="Restoring After Reinstalling">
+        <Body>
+          When you tap &quot;I've used Proudly before&quot; on a new install,
+          Proudly looks in your private iCloud account for a backup or iCloud
+          sync data from a previous install, and restores it only if you
+          confirm. If you choose to start fresh instead,
+          Proudly asks you to confirm and then permanently deletes that habit
+          data from your iCloud account. Habits from a device that was never
+          signed in to iCloud cannot be restored.
         </Body>
       </Section>
 
@@ -137,6 +165,18 @@ export default function PrivacyPage() {
           as purchase status, product identifiers, entitlement status, and app
           user or device-related identifiers needed to provide subscription
           access. Proudly does not directly receive your payment card details.
+        </Body>
+      </Section>
+
+      <Section title="App Store Privacy Details">
+        <Body>
+          The only data collected through Proudly is purchase history, processed
+          by RevenueCat to unlock Proudly Plus and to show subscription
+          statistics to the developer. It uses an anonymous ID, is not linked to
+          your identity, and is not used to track you across apps or websites.
+          Proudly has no accounts, no advertising, and no third-party analytics.
+          Your habits, name, and profile photo stay on your device or in your
+          own private iCloud account, which Proudly cannot access.
         </Body>
       </Section>
 
@@ -164,9 +204,14 @@ export default function PrivacyPage() {
           You can delete individual habits inside the Proudly app. Deleting the
           app from your device removes all locally stored Proudly data. If
           iCloud sync is enabled, habit records also live in your private iCloud
-          account; you can remove them by disabling iCloud sync in Settings,
-          deleting the Proudly data from iCloud in iOS Settings, or signing out
-          of iCloud on your device.
+          account. Turning iCloud sync off stops syncing but does not delete
+          that data; to delete it, go to iOS Settings › your name › iCloud ›
+          Manage Account Storage › Proudly, or choose Start fresh after tapping
+          &quot;I've used Proudly before&quot; on a new install (this also removes the habit
+          backup). To remove your name and profile photo from iCloud, clear
+          them in Profile. To ask for
+          subscription records held by RevenueCat to be deleted, email support
+          at the address below.
         </Body>
       </Section>
 

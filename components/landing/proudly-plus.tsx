@@ -1,12 +1,15 @@
 import { AppStoreBadge } from "@/components/common/app-store-badge";
 import { FadeIn } from "@/components/common/motion";
 
+// Keep in sync with the app's ProudlyPlusBenefit.all.
 const BENEFITS = [
   "Unlimited habits",
-  "Home & Lock Screen habit widgets",
+  "Home & Lock Screen widgets",
+  "Advanced progress insights",
+  "Monthly history",
+  "iCloud sync",
   "Custom themes",
   "Proud Moments history",
-  "Advanced progress insights",
 ];
 
 function CheckIcon() {
@@ -45,9 +48,9 @@ export function ProudlyPlus() {
             </h2>
 
             <p className="mx-auto mb-9 max-w-lg text-muted-foreground leading-relaxed dark:text-white/72">
-              Proudly is free for up to 3 habits. Upgrade to Proudly Plus when
-              you want unlimited habits, custom themes, Proud Moments history,
-              and deeper progress insights.
+              Proudly is free for up to 3 habits. Try Proudly Plus free for 7
+              days when you want more habits, widgets for your Home and Lock
+              Screen, and deeper insights. If you stop, your habits are kept.
             </p>
 
             <ul className="mx-auto mb-8 max-w-xs space-y-3 text-left">
@@ -65,7 +68,7 @@ export function ProudlyPlus() {
             </ul>
 
             <p className="mb-7 text-muted-foreground text-sm dark:text-white/60">
-              Monthly and yearly plans available.
+              Monthly and yearly plans. 7-day free trial for new subscribers.
             </p>
 
             <AppStoreBadge

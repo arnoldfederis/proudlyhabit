@@ -60,27 +60,38 @@ export const FAQ_ITEMS = [
   },
   {
     question: "Is Proudly free?",
-    answer: "Yes. Proudly can be used for free with up to 3 habits.",
+    answer:
+      "Yes. Proudly is free for up to 3 habits, including schedules, rest days, reminders, the Focus Timer with its Live Activity, the habit grid, the Today widget, and an automatic backup of your habits to your iCloud.",
   },
   {
-    question: "What is Proudly Plus?",
+    question: "What does Proudly Plus include?",
     answer:
-      "Proudly Plus unlocks unlimited habits, Home and Lock Screen habit widgets, iCloud sync, custom themes, Proud Moments history, and advanced progress insights.",
+      "Unlimited habits, Home and Lock Screen habit widgets, advanced progress insights (momentum, best days, consistency, and a 6-month heatmap), monthly history, iCloud sync, custom themes, and Proud Moments, a calendar of every win. New subscribers can try Plus free for 7 days.",
+  },
+  {
+    question: "Does Proudly use guilt or streak pressure?",
+    answer:
+      "No. Proudly is designed to feel gentle, encouraging, and supportive. Rest days, flexible schedules, and weekly goals mean a day off doesn't have to cost you your streak.",
+  },
+  {
+    question: "What is a rest day?",
+    answer:
+      "A rest day lets you take a day off from a habit without losing your streak. Your streak pauses instead of breaking, and picks up again when you next check in. Forgot to mark one? The next day you can turn yesterday into a rest day, once a week per habit. Rescued days are marked in your history so your streak stays honest.",
+  },
+  {
+    question: "Can I choose which days a habit runs?",
+    answer:
+      "Yes. A habit can run every day, on certain days like Monday, Wednesday and Friday, or toward a weekly goal like 3 times a week. Days a habit isn't scheduled never break your streak, and on a weekly goal the days you skip don't count as misses.",
+  },
+  {
+    question: "Does the Focus Timer show on the Lock Screen?",
+    answer:
+      "Yes. When you start a Focus Timer, it appears as a Live Activity on your Lock Screen and in the Dynamic Island on iPhones that have one. You can pause or end it there, and check in when it's done. It's free for everyone.",
   },
   {
     question: "Can I track habits multiple times per day?",
     answer:
       "Yes. Proudly supports habits that can be completed more than once per day, such as drinking water four times a day.",
-  },
-  {
-    question: "Can I choose which days a habit runs?",
-    answer:
-      "Yes. A habit can run every day, on certain days like Monday, Wednesday and Friday, or toward a weekly goal like 3 times a week. Days a habit isn't scheduled never break your streak.",
-  },
-  {
-    question: "What is a rest day?",
-    answer:
-      "A rest day lets you take a day off from a habit without losing your streak. Your streak pauses instead of breaking, and picks up again when you next check in.",
   },
   {
     question: "Does Proudly have widgets?",
@@ -90,22 +101,27 @@ export const FAQ_ITEMS = [
   {
     question: "Does Proudly support reminders?",
     answer:
-      "Yes. Proudly supports local daily reminders if notification permission is enabled.",
+      "Yes. Proudly sends local reminders only on the days a habit runs, and you can check in or take a rest day right from the notification. Need a quiet week? Mute a habit's reminders in Profile › Reminders and turn them back on later with the same times.",
   },
   {
     question: "Does Proudly have iCloud sync?",
     answer:
-      "Yes, for Proudly Plus subscribers. iCloud sync is optional and can be enabled in Settings. Habit data is stored in the user's private iCloud account. Proudly continues to work locally when iCloud is unavailable.",
+      "Two things, both in your private iCloud. Everyone signed in to iCloud gets an automatic backup of their habits, so they come back after reinstalling or on a new iPhone. Proudly Plus adds live iCloud sync, which keeps habits in step across your Apple devices as you use them. Proudly keeps working on the device when iCloud is unavailable.",
+  },
+  {
+    question: "I reinstalled Proudly. Can I get my habits back?",
+    answer:
+      "Yes, if you're signed in to the same iCloud account. Proudly backs up your habits, streaks and history to your private iCloud automatically, on the free plan too. After reinstalling or on a new iPhone, tap \"I've used Proudly before\" on the welcome screen and they come back right away, so there's no setup to redo. Your name and profile photo come back too. Prefer a clean slate? Choose Start fresh and Proudly deletes the old backup after asking you to confirm.",
+  },
+  {
+    question: "Will I lose my habits if I cancel Proudly Plus?",
+    answer:
+      "No. Your habits and history are kept. You choose up to 3 habits to keep using for free, and the rest are paused, not deleted, until you subscribe again. Paused habits don't send reminders.",
   },
   {
     question: "How do I cancel Proudly Plus?",
     answer:
       "Proudly Plus subscriptions are managed by Apple. Open iPhone Settings, tap your Apple Account, then Subscriptions, then Proudly, then cancel.",
-  },
-  {
-    question: "Will I lose my habits if I cancel Proudly Plus?",
-    answer:
-      "Your habit data should not be deleted just because Plus expires. After Plus expires, the app returns to free plan limits.",
   },
   {
     question: "Does Proudly sell my data?",
@@ -122,7 +138,9 @@ export const FAQ_ITEMS = [
   },
 ] as const;
 
-export const HOME_FAQ_ITEMS = FAQ_ITEMS.slice(0, 8);
+/** Shown in the FAQ section on the home page and in its FAQPage JSON-LD,
+ * so the visible answers and the structured data always match. */
+export const HOME_FAQ_ITEMS = FAQ_ITEMS.slice(1, 14);
 
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
