@@ -84,6 +84,8 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
+  // Safari on iPhone shows an "Open / Get" App Store banner on every page.
+  other: { "apple-itunes-app": "app-id=6782197891" },
 };
 
 export const viewport: Viewport = {

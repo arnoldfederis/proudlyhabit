@@ -89,6 +89,11 @@ export const FAQ_ITEMS = [
       "Yes. When you start a Focus Timer, it appears as a Live Activity on your Lock Screen and in the Dynamic Island on iPhones that have one. You can pause or end it there, and check in when it's done. It's free for everyone.",
   },
   {
+    question: "Can I share my progress?",
+    answer:
+      "Yes. Tap Share on any habit to turn its streak or total into a card made for Instagram Stories, Messages or X, in a story or square size. You can add your name and profile photo, or leave them off.",
+  },
+  {
     question: "Can I track habits multiple times per day?",
     answer:
       "Yes. Proudly supports habits that can be completed more than once per day, such as drinking water four times a day.",

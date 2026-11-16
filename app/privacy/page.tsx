@@ -147,6 +147,18 @@ export default function PrivacyPage() {
         </Body>
       </Section>
 
+      <Section title="Share Cards">
+        <Body>
+          Share cards are created on your device. When you share one, you
+          choose where it goes using the iOS share sheet. The shared text
+          includes a link to a proudlyhabit.com page that shows the same
+          milestone; the link contains only what is on the card (habit name,
+          number, colors, and your name only if you chose to show it).
+          Proudly does not store these links or the people who open them,
+          beyond standard web server logs kept by our hosting provider.
+        </Body>
+      </Section>
+
       <Section title="Notifications">
         <Body>
           If you enable reminders, Proudly uses local iOS notifications.

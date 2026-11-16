@@ -57,6 +57,7 @@ const jsonLd = {
         "Focus Timer with a Live Activity on the Lock Screen and Dynamic Island",
         "Check in from Home Screen and Lock Screen widgets",
         "See every win on the Proud Moments calendar",
+        "Share milestone cards to Stories, Messages and X",
         "Customize themes with Proudly Plus",
         "Advanced progress insights with Proudly Plus",
         "iCloud sync with Proudly Plus",
