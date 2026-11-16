@@ -31,7 +31,7 @@ export async function generateMetadata({
     : `${m.value} ${unitLine(m)} of ${m.habit}`;
   const description =
     "Small wins add up. Track gentle habits with Proudly, free on the App Store.";
-  const image = `/s/og?${query(params)}`;
+  const image = `/s/og?${query(m)}`;
 
   return {
     title,

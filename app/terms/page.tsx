@@ -47,7 +47,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function TermsPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: July 3, 2026"
+      effectiveDate="Effective date: November 17, 2026"
       intro="These Terms of Use explain how you may use Proudly, a gentle habit tracker for small wins."
       title="Terms of Use"
     >
@@ -113,17 +113,33 @@ export default function TermsPage() {
         </Body>
       </Section>
 
-      <Section title="iCloud Sync">
+      <Section title="iCloud Backup and Sync">
         <Body>
-          Proudly Plus subscribers can enable optional iCloud sync to keep habit
-          data consistent across their Apple devices. Sync is powered by Apple
-          iCloud and CloudKit and is only available while a Proudly Plus
-          subscription is active and iCloud is available on your device. Proudly
-          does not guarantee real-time or uninterrupted sync and is not
-          responsible for delays, conflicts, data loss, or availability issues
-          caused by iCloud, network conditions, or Apple's services. You can
-          disable iCloud sync at any time in Proudly Settings; a restart of the
-          app may be required for the change to take effect.
+          If you are signed in to iCloud, Proudly keeps a backup of your
+          habits, name, and profile photo in your private iCloud account so
+          you can restore them after reinstalling the app. Proudly Plus
+          subscribers can also enable optional iCloud sync to keep habit data
+          consistent across their Apple devices while a subscription is active.
+          Backup and sync are powered by Apple iCloud and CloudKit. Proudly
+          does not guarantee real-time or uninterrupted backup or sync and is
+          not responsible for delays, conflicts, data loss, or availability
+          issues caused by iCloud, network conditions, or Apple&apos;s
+          services. You can disable iCloud sync at any time in Proudly
+          Settings.
+        </Body>
+      </Section>
+
+      <Section title="Sharing">
+        <Body>
+          Proudly lets you create cards of your progress and share them, along
+          with a link to a proudlyhabit.com page showing the same milestone.
+          You decide what to share and where. You are responsible for the
+          content you share, including habit names and your name or photo if
+          you choose to show them, and sharing to other apps and services is
+          subject to their own terms. Shared pages may hide or replace text
+          that looks offensive, misleading, or like a link. Please don&apos;t
+          use Proudly&apos;s sharing features to post content that is
+          unlawful, hateful, harassing, or that impersonates others.
         </Body>
       </Section>
 

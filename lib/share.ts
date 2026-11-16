@@ -1,3 +1,4 @@
+import { isAllowedShareText } from "@/lib/blocked-words";
 import { APP_STORE_URL } from "@/lib/seo";
 import { env } from "@/env";
 
@@ -21,9 +22,10 @@ function first(value: string | string[] | undefined): string | undefined {
   return Array.isArray(value) ? value[0] : value;
 }
 
+/** Trims, shortens, and drops anything that fails the blocklist. */
 function clean(text: string | undefined, max: number): string | undefined {
-  const trimmed = text?.replace(/\s+/g, " ").trim();
-  return trimmed ? trimmed.slice(0, max) : undefined;
+  const trimmed = text?.replace(/\s+/g, " ").trim().slice(0, max);
+  return trimmed && isAllowedShareText(trimmed) ? trimmed : undefined;
 }
 
 export function parseMilestone(params: Params): ShareMilestone {
@@ -53,12 +55,16 @@ export function headline(m: ShareMilestone): string {
   return `${m.value} ${unitLine(m)}: ${m.habit}`;
 }
 
-export function query(params: Params): string {
-  const search = new URLSearchParams();
-  for (const key of ["h", "v", "m", "c", "s", "n"]) {
-    const value = first(params[key]);
-    if (value) search.set(key, value);
-  }
+/** Query string rebuilt from the cleaned milestone, never the raw URL. */
+export function query(m: ShareMilestone): string {
+  const search = new URLSearchParams({
+    h: m.habit,
+    v: String(m.value),
+    m: m.metric,
+    c: m.color.replace("#", ""),
+    s: m.style,
+  });
+  if (m.name) search.set("n", m.name);
   return search.toString();
 }
 

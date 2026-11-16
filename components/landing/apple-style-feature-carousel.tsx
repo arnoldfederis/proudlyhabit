@@ -77,6 +77,15 @@ const carouselItems: CarouselFeatureItem[] = [
       "iPhone Lock Screen showing a Proudly focus timer Live Activity counting down for a Journal habit",
   },
   {
+    altName: "Share cards",
+    eyebrow: "Share your wins",
+    heading: "Small wins, worth sharing.",
+    body: "Turn any habit's streak or total into a card made for Instagram Stories, Messages or X. Pick a style, add your name and photo if you like, and share in a tap.",
+    imageSrc: "/assets/device-24.png",
+    imageAlt:
+      "Proudly share sheet showing a purple card for Read 10 pages with 125 days done, a habit grid and a QR code, with Story, Square and style options",
+  },
+  {
     altName: "Siri Shortcuts",
     eyebrow: "Shortcuts",
     heading: "Start habits faster with Siri.",
@@ -164,7 +173,7 @@ export function AppleStyleFeatureCarousel() {
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-[#6F6478] text-base leading-relaxed sm:text-lg dark:text-white/72">
             Proudly brings your habits, widgets, progress, themes, and proud
-            moments together in one calm place.
+            moments together in one calm place, and makes them easy to share.
           </p>
         </FadeIn>
       </div>

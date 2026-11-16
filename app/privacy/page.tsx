@@ -47,7 +47,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: November 13, 2026"
+      effectiveDate="Effective date: November 17, 2026"
       intro="This Privacy Policy explains how Proudly handles habit data, reminders, subscription status, and support requests."
       title="Privacy Policy"
     >
