@@ -1,5 +1,3 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
 import { parseMilestone, unitLine } from "@/lib/share";
@@ -14,12 +12,22 @@ export const runtime = "nodejs";
 export async function GET(request: NextRequest) {
   const m = parseMilestone(Object.fromEntries(request.nextUrl.searchParams));
 
+  // Fetched from the site itself rather than read from disk: the production
+  // server doesn't ship the public/ folder next to the code, so readFile
+  // failed there (the home page's OG image is built ahead of time and never
+  // hit this). The site always serves these files.
+  const origin = request.nextUrl.origin;
+  const load = async (path: string) => {
+    const response = await fetch(new URL(path, origin), { cache: "force-cache" });
+    if (!response.ok) throw new Error(`${path}: ${response.status}`);
+    return response.arrayBuffer();
+  };
   const [icon, inter600, inter700] = await Promise.all([
-    readFile(join(process.cwd(), "public", "proudly-icon-512x512.png")),
-    readFile(join(process.cwd(), "public", "fonts", "inter-600.ttf")),
-    readFile(join(process.cwd(), "public", "fonts", "inter-700.ttf")),
+    load("/proudly-icon-512x512.png"),
+    load("/fonts/inter-600.ttf"),
+    load("/fonts/inter-700.ttf"),
   ]);
-  const iconSrc = `data:image/png;base64,${icon.toString("base64")}`;
+  const iconSrc = `data:image/png;base64,${Buffer.from(icon).toString("base64")}`;
 
   const dark = m.style !== "soft";
   const background =
