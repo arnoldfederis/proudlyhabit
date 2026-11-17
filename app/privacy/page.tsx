@@ -47,7 +47,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function PrivacyPage() {
   return (
     <LegalPageShell
-      effectiveDate="Effective date: November 17, 2026"
+      effectiveDate="Effective date: November 18, 2026"
       intro="This Privacy Policy explains how Proudly handles habit data, reminders, subscription status, and support requests."
       title="Privacy Policy"
     >
@@ -156,6 +156,12 @@ export default function PrivacyPage() {
           number, colors, and your name only if you chose to show it).
           Proudly does not store these links or the people who open them,
           beyond standard web server logs kept by our hosting provider.
+        </Body>
+        <Body>
+          If you tap Save Image, Proudly asks for permission to add images to
+          your Photos. It can only add the card you save; it can&apos;t see or
+          read your photo library. You can change this anytime in iOS Settings
+          › Proudly.
         </Body>
       </Section>
 
