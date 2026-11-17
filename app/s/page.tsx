@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TiltCard } from "@/components/common/tilt-card";
 import { APP_NAME } from "@/lib/seo";
 import {
   appStoreCampaignURL,
@@ -62,9 +63,10 @@ export default async function SharedMilestone({ searchParams }: Props) {
 
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center gap-10 bg-[linear-gradient(135deg,#f4efff_0%,#fdeef5_45%,#eef6ff_100%)] px-6 py-16 dark:bg-[linear-gradient(135deg,#1a1730_0%,#2b2145_100%)]">
-      <article
+      <TiltCard
         aria-label={headline(m)}
-        className={`relative w-full max-w-sm overflow-hidden rounded-[2rem] p-8 shadow-[0_30px_80px_-30px_rgba(124,92,240,0.45)] ${
+        shine={m.style === "soft" ? 0.55 : 0.3}
+        className={`w-full max-w-sm cursor-default select-none overflow-hidden rounded-[2rem] p-8 shadow-[0_30px_80px_-30px_rgba(124,92,240,0.45)] ${
           m.style === "glow"
             ? "bg-[linear-gradient(135deg,#7C5CF0,#DE5CA6)] text-white"
             : m.style === "night"
@@ -88,7 +90,7 @@ export default async function SharedMilestone({ searchParams }: Props) {
           {m.value}
         </p>
         <p className="mt-2 font-bold text-2xl">{unitLine(m)}</p>
-      </article>
+      </TiltCard>
 
       <section className="flex max-w-sm flex-col items-center gap-5 text-center">
         <Image
